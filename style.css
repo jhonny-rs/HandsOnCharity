@@ -1,25 +1,42 @@
+@font-face {
+    font-family: "helmet-neue";
+    src: url(fonts/HelmetNeue-Regular.otf);
+}
+
 body {
     margin: 0;
     padding: 0;
     color: #111111;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: darkgray;
+    font-family: "helmet-neue", Helvetica, sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+#background-img {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    opacity: 60%;
+    top: 0;
 }
 
 #header {
-    background-color: white;
-    position: fixed;
+    background-color: transparent;
     width: 100vw;
+    height: 10vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), transparent);
+    padding-top: 10px;
 }
 
 #header-logo {
     width: 32px;
 }
 
-#header ul, ul div{
+#header ul,
+ul div {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    justify-items: space-between;
+    grid-template-columns: 1fr 9fr;
+    justify-items: center;
     align-items: center;
     gap: 20px;
 
@@ -31,15 +48,17 @@ body {
 }
 
 #search {
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, .1);
     width: clamp(32px, 250px, 500px);
     height: clamp(16px, 32px, 48px);
-    border: 1px solid rgba(200, 200, 200);
+    border: 1px solid rgba(100, 100, 100);
     border-radius: 24px;
     padding: 0 12px;
+    color: white;
 }
 
-li, li a{
+li,
+li a {
     list-style: none;
     text-decoration: none;
     color: inherit;
@@ -47,6 +66,8 @@ li, li a{
     text-overflow: ellipsis;
     text-wrap: nowrap;
     text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 .5 black;
 }
 
 #header-end a:hover {
@@ -61,8 +82,28 @@ li, li a{
     border: 1px solid transparent;
     border-radius: 24px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .orange-btn:hover {
     background-color: #b53d16;
+}
+
+.white-text {
+    color: white;
+}
+
+.page-start-text {
+    margin-left: 10vw;
+    margin-top: 30vh;
+}
+
+h1 {
+    font-size: clamp(24px, 48px, 64px);
+}
+
+h1 i {
+    color: #E65728;
+    font-style: normal;
+    font-weight: bold;
 }
