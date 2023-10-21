@@ -68,11 +68,17 @@ li a {
     text-transform: uppercase;
     color: white;
     text-shadow: 0 0 .5 black;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
 }
 
 #header-end a:hover {
     color: #E65728;
-    border-bottom: 1px solid #E65728;
+    transition: color 250ms ease-in-out, border 250ms ease-in-out;
+    border-bottom: 2px solid #E65728;
+    padding-bottom: 5px;
+    
+    
 }
 
 .orange-btn {
@@ -87,6 +93,7 @@ li a {
 
 .orange-btn:hover {
     background-color: #b53d16;
+    transition: ;
 }
 
 .white-text {
